@@ -1,5 +1,5 @@
 import React from "react";
-import '../CSS/Footer.css';
+import '../CSS/login.css';
 const Footer = () => {
   return (
     <footer id="footerWrapper">
