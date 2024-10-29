@@ -19,7 +19,7 @@ const Login = () => {
             onMouseLeave={() => handleMouseLeave(imageRef.current)}
           />
           <div className="login-form">
-            <h1>Login</h1>
+            <h1>Login To Your Account</h1>
             <input type="text" placeholder="Username" className="login-input" />
             <input type="password" placeholder="Password" className="login-input" />
             <button className="login-button">Login</button>
