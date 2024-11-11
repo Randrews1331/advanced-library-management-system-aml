@@ -14,6 +14,7 @@ const Home = () => {
             <div className="logo">
               <a href="#"><img src={logo} alt="AML Logo" /></a>
             </div>
+            <h1 className="name-top">Advance Media Library</h1>
             <nav className="navigation">
               <ul>
                 <li>
@@ -35,7 +36,7 @@ const Home = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="login">
                     <i className="fas fa-sign-in-alt icon"></i>
                     Log in
                   </a>
