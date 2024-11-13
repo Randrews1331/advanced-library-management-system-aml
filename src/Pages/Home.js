@@ -4,10 +4,10 @@ import React from 'react';
 import '../CSS/Home.css';
 import logo from '../CSS/Logo.png';
 import banner from '../CSS/externalbanner.jpg';
-import image1 from '../CSS/mini.jpg'; // Add your image imports
-//import image2 from '../CSS/image2.jpg';
-//import image3 from '../CSS/image3.jpg';
-//import image4 from '../CSS/image4.jpg';
+import image1 from '../CSS/book 1.jpg'; // Add your image imports
+// import image2 from '../CSS/image2.jpg';
+// import image3 from '../CSS/image3.jpg';
+// import image4 from '../CSS/image4.jpg';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Navbar from '../Components/Navbar.js';
 
@@ -33,9 +33,9 @@ const Home = () => {
           </div>
         </div>
       </header>
-      <h1 class="mid-text">Media</h1>
+      <h1 className="mid-text">Media</h1>
 
-      {/* New section with four squares */}
+      {/* New section with four circles */}
       <div className="squares-container">
         <div className="square">
           <a href="/page1">
