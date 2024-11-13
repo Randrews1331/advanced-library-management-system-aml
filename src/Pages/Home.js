@@ -4,8 +4,12 @@ import React from 'react';
 import '../CSS/Home.css';
 import logo from '../CSS/Logo.png';
 import banner from '../CSS/externalbanner.jpg';
+import image1 from '../CSS/mini.jpg'; // Add your image imports
+//import image2 from '../CSS/image2.jpg';
+//import image3 from '../CSS/image3.jpg';
+//import image4 from '../CSS/image4.jpg';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import Navbar from '../Components/Navbar.js'; // Import the Navbar component
+import Navbar from '../Components/Navbar.js';
 
 const Home = () => {
   return (
@@ -17,7 +21,7 @@ const Home = () => {
               <a href="#"><img src={logo} alt="AML Logo" /></a>
             </div>
             <h1 className="name-top">Advance Media Library</h1>
-            <Navbar /> {/* Include the Navbar component here */}
+            <Navbar />
           </div>
         </div>
         <div className="banner">
@@ -29,6 +33,35 @@ const Home = () => {
           </div>
         </div>
       </header>
+      <h1 class="mid-text">Media</h1>
+
+      {/* New section with four squares */}
+      <div className="squares-container">
+        <div className="square">
+          <a href="/page1">
+            <img src={image1} alt="Image 1" />
+            <h3>Title 1</h3>
+          </a>
+        </div>
+        <div className="square">
+          <a href="/page2">
+            <img src={image1} alt="Image 2" />
+            <h3>Title 2</h3>
+          </a>
+        </div>
+        <div className="square">
+          <a href="/page3">
+            <img src={image1} alt="Image 3" />
+            <h3>Title 3</h3>
+          </a>
+        </div>
+        <div className="square">
+          <a href="/page4">
+            <img src={image1} alt="Image 4" />
+            <h3>Title 4</h3>
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
