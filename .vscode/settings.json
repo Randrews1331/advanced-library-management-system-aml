@@ -9,9 +9,24 @@
             "server": "localhost",
             "port": 3307,
             "driver": "MySQL",
-            "name": "AML",
+            "name": "AML - Local",
             "database": "website_management",
-            "username": "root"
+            "username": "root",
+            "password": "RTGH6S!"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "10.68.194.113",   // replace with your actual IP
+            "port": 3306,                 // use the port open for remote access
+            "driver": "MySQL",
+            "name": "AML - Remote",
+            "database": "website_management",
+            "username": "user1",          // the new username
+            "password": "RTGH6S!"         // password for the new user
         }
     ]
 }
