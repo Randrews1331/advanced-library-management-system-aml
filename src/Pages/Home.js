@@ -1,9 +1,11 @@
+// src/components/Home.js
+
 import React from 'react';
 import '../CSS/Home.css';
 import logo from '../CSS/Logo.png';
 import banner from '../CSS/externalbanner.jpg';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import Navbar from '../Components/Navbar.js'; // Import the Navbar component
 
 const Home = () => {
   return (
@@ -15,34 +17,7 @@ const Home = () => {
               <a href="#"><img src={logo} alt="AML Logo" /></a>
             </div>
             <h1 className="name-top">Advance Media Library</h1>
-            <nav className="navigation">
-              <ul>
-                <li>
-                  <a href="#">
-                    <i className="fas fa-home icon"></i>
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fas fa-search icon"></i>
-                    Media Search
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fas fa-life-ring icon"></i>
-                    Support
-                  </a>
-                </li>
-                <li>
-                  <a href="login">
-                    <i className="fas fa-sign-in-alt icon"></i>
-                    Log in
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <Navbar /> {/* Include the Navbar component here */}
           </div>
         </div>
         <div className="banner">
