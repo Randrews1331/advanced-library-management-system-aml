@@ -21,7 +21,7 @@
             },
             "previewLimit": 50,
             "server": "10.68.194.113",   // replace with your actual IP
-            "port": 3306,                 // use the port open for remote access
+            "port": 3307,                 // use the port open for remote access
             "driver": "MySQL",
             "name": "AML - Remote",
             "database": "website_management",
