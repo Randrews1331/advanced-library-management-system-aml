@@ -5,7 +5,7 @@ import '../CSS/Home.css';
 import logo from '../CSS/Logo.png';
 import banner from '../CSS/externalbanner.jpg';
 import image1 from '../CSS/book 1.jpg'; // Add your image imports
-// import image2 from '../CSS/image2.jpg';
+import image2 from '../CSS/book2.jpg';
 // import image3 from '../CSS/image3.jpg';
 // import image4 from '../CSS/image4.jpg';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -39,7 +39,7 @@ const Home = () => {
       <div className="squares-container">
         <div className="square">
           <a href="/page1">
-            <img src={image1} alt="Image 1" />
+            <img src={image2} alt="Image 1" />
             <h3>Title 1</h3>
           </a>
         </div>
