@@ -27,3 +27,7 @@ p{
     padding: 20px;
     text-align: center;
 }
+.title{
+    font-weight: bold;
+    font-size: larger;
+}
