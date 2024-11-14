@@ -1,0 +1,29 @@
+li{
+    list-style-type: none;
+    padding: 20px;
+    text-align: center;
+}
+footer{
+    display: flex;
+    width:100%;
+    background-color: lightgrey;
+    height: fit-content;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    text-align: center;
+
+}
+#leftList{
+    float: left;
+}
+#rightList{
+    float: right;
+}
+p{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+}

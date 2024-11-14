@@ -10,9 +10,11 @@ import image2 from '../CSS/book2.jpg';
 // import image4 from '../CSS/image4.jpg';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Navbar from '../Components/Navbar.js';
+import Footer from '../Components/footer.js';
 
 const Home = () => {
   return (
+    <>
     <div>
       <header className="header">
         <div className="header-top">
@@ -62,7 +64,9 @@ const Home = () => {
           </a>
         </div>
       </div>
+      <Footer />
     </div>
+    </>
   );
 }
 
