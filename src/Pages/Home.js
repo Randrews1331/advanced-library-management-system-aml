@@ -1,3 +1,4 @@
+// src/Pages/Home.js
 import React, { useState } from 'react';
 import '../CSS/Home.css';
 import logo from '../CSS/Logo.png';
@@ -12,18 +13,11 @@ import image7 from '../CSS/book7.jpg';
 import image8 from '../CSS/book8.jpg';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Navbar from '../Components/Navbar.js';
-import Footer from '../Components/footer.js'; // Make sure the path to Footer is correct
+import Footer from '../Components/footer.js';
+import Popup from '../Components/popup.js'; // Import Popup
 
 const Home = () => {
   const imageSets = [
-    [image1, image2, image3, image4],
-    [image5, image6, image7, image8]
-  ];
-  const imageSets2 = [
-    [image1, image2, image3, image4],
-    [image5, image6, image7, image8]
-  ];
-  const imageSets3 = [
     [image1, image2, image3, image4],
     [image5, image6, image7, image8]
   ];
@@ -32,6 +26,11 @@ const Home = () => {
 
   const [currentSetIndex, setCurrentSetIndex] = useState(Array(4).fill(0));
   const [slideOut, setSlideOut] = useState(Array(4).fill(false));
+
+  // State for popup visibility and selected image details
+  const [popupVisible, setPopupVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedTitle, setSelectedTitle] = useState('');
 
   const handleNextSet = (rowIndex) => {
     setSlideOut((prev) => {
@@ -55,6 +54,16 @@ const Home = () => {
     }, 300);
   };
 
+  const handleImageClick = (image, title) => {
+    setSelectedImage(image);
+    setSelectedTitle(title);
+    setPopupVisible(true);
+  };
+
+  const closePopup = () => {
+    setPopupVisible(false);
+  };
+
   return (
     <div>
       <header className="header">
@@ -76,6 +85,7 @@ const Home = () => {
           </div>
         </div>
       </header>
+
       <h1 className="mid-text">Media</h1>
 
       {/* Multiple rows of images with different genres */}
@@ -85,11 +95,9 @@ const Home = () => {
           <div className="squares-row">
             <div className={`squares-container ${slideOut[rowIndex] ? 'slide-left' : ''}`}>
               {imageSets[currentSetIndex[rowIndex]].map((image, index) => (
-                <div className="square" key={index}>
-                  <a href={`/page${rowIndex * 4 + index + 1}`}>
-                    <img src={image} alt={`Image ${index + 1}`} />
-                    <h3>{`Title ${rowIndex * 4 + index + 1}`}</h3>
-                  </a>
+                <div className="square" key={index} onClick={() => handleImageClick(image, `Title ${rowIndex * 4 + index + 1}`)}>
+                  <img src={image} alt={`Image ${index + 1}`} />
+                  <h3>{`Title ${rowIndex * 4 + index + 1}`}</h3>
                 </div>
               ))}
             </div>
@@ -100,7 +108,11 @@ const Home = () => {
         </div>
       ))}
 
-      {/* Include Footer component here */}
+      {/* Display the popup if visible */}
+      {popupVisible && (
+        <Popup image={selectedImage} title={selectedTitle} onClose={closePopup} />
+      )}
+
       <Footer />
     </div>
   );
