@@ -1,16 +1,16 @@
 // src/Pages/Home.js
 import React, { useState } from 'react';
 import '../CSS/Home.css';
-import logo from '../CSS/Logo.png';
-import banner from '../CSS/externalbanner.jpg';
-import image1 from '../CSS/book 1.jpg';
-import image2 from '../CSS/book2.jpg';
-import image3 from '../CSS/book3.jpg';
-import image4 from '../CSS/book4.jpg';
-import image5 from '../CSS/book5.jpg';
-import image6 from '../CSS/book6.jpg';
-import image7 from '../CSS/book7.jpg';
-import image8 from '../CSS/book8.jpg';
+import logo from '../CSS/imgs/Logo.png';
+import banner from '../CSS/imgs/externalbanner.jpg';
+import image1 from '../CSS/imgs/book 1.jpg';
+import image2 from '../CSS/imgs/book2.jpg';
+import image3 from '../CSS/imgs/book3.jpg';
+import image4 from '../CSS/imgs/book4.jpg';
+import image5 from '../CSS/imgs/book5.jpg';
+import image6 from '../CSS/imgs/book6.jpg';
+import image7 from '../CSS/imgs/book7.jpg';
+import image8 from '../CSS/imgs/book8.jpg';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Navbar from '../Components/Navbar.js';
 import Footer from '../Components/footer.js';

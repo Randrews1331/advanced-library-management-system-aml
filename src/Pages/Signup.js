@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import miniLogo from '../CSS/mini.jpg';
+import miniLogo from '../CSS/imgs/mini.jpg';
 import '../CSS/login.css';
 import { handleMouseMove, handleMouseLeave } from '../Javascript/LoginJavaS';
 
