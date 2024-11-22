@@ -60,6 +60,9 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button className="login-button" onClick={handleLogin}>Login</button>
+            <a class="signlink" href="signup">
+              SignUp
+            </a>
           </div>
         </div>
       </div>
