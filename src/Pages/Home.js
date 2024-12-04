@@ -1,7 +1,6 @@
 // src/Pages/Home.js
 import React, { useState } from 'react';
 import '../CSS/Home.css';
-import logo from '../CSS/imgs/Logo.png';
 import banner from '../CSS/imgs/externalbanner.jpg';
 import image1 from '../CSS/imgs/book 1.jpg';
 import image2 from '../CSS/imgs/book2.jpg';
@@ -67,15 +66,7 @@ const Home = () => {
   return (
     <div>
       <header className="header">
-        <div className="header-top">
-          <div className="container">
-            <div className="logo">
-              <a href="#"><img src={logo} alt="AML Logo" /></a>
-            </div>
-            <h1 className="name-top">Advance Media Library</h1>
-            <Navbar />
-          </div>
-        </div>
+        <Navbar />
         <div className="banner">
           <img src={banner} alt="Greenwich Library Banner" />
           <div className="banner-text">
