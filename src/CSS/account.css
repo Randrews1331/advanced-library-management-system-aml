@@ -1,0 +1,52 @@
+.account-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .reserved-books {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .book-row {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .book-row:hover {
+    transform: scale(1.05); /* Grows the row slightly */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  }
+  
+  .book-image {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .book-details {
+    flex: 1;
+  }
+  
+  .book-details h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .book-details p {
+    margin: 5px 0 0;
+    color: #555;
+  }
+  

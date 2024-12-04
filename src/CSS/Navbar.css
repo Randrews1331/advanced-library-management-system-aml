@@ -1,35 +1,41 @@
 /* src/CSS/Navbar.css */
 
+/* src/CSS/Navbar.css */
+
 .navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .navigation ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-    margin-right: 10px;
-    text-align: center;
-    margin-left: 580px;
-  }
-  
-  .navigation ul li {
-    margin: 10px 0;
-  }
-  
-  .navigation ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.9em;
-    padding-left: 50px;
-  }
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  padding-right: 20px; /* Add some spacing from the right edge */
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  margin: 0 15px; /* Add horizontal spacing between items */
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.icon {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
   
   .icon {
     font-size: 1.5em;

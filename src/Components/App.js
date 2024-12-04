@@ -3,22 +3,29 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import Navbar from '../Components/Navbar'; // Import the Navbar component
 import Home from '../Pages/Home';
 import Login from '../Pages/login';
+import Signup from '../Pages/Signup';
 
 function App() {
-  // Get the current location (route)
   const location = useLocation();
 
   return (
     <div>
       {/* Conditionally render Navbar based on the current location */}
-      {location.pathname !== '/login' && <Navbar />} {/* Navbar will not show on Login page */}
+      {location.pathname !== '/login' && location.pathname !== '/signup' && <Navbar />}
       
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </div>
   );
 }
 
-export default App;
+export default function WrappedApp() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
