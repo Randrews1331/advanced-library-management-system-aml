@@ -1,0 +1,26 @@
+header{
+    width: 100%;
+    background-color: aqua;
+    height: 20%;
+    display: flex;
+}
+p{
+   text-align: center;
+   display: flex;
+   margin: 10px;
+}
+button{
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    height: 50%;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.searchBar{
+    display: flex;
+    text-align: center;
+    margin: 30px;
+}
