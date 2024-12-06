@@ -22,5 +22,13 @@ button{
 .searchBar{
     display: flex;
     text-align: center;
-    margin: 30px;
+    padding: 40px;
+    margin: 20px;
 }
+input{
+    margin-left: 20px;
+    width: 400px;
+
+}
+
+
