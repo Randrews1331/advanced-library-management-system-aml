@@ -47,7 +47,7 @@ const Account = () => {
         {/* Header Section */}
         <div className="header">
           <h1>Your Reserved Books</h1>
-          <p>Manage your reservations here.</p>
+          <p class="whitetext">Manage your reservations here.</p>
         </div>
 
         {/* Filters/Search Section */}

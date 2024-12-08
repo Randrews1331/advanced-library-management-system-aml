@@ -11,6 +11,7 @@ body {
 .header {
   background-color: #fff;
   color: #333;
+   flex-direction: column;
 }
 
 .header-top {
@@ -125,7 +126,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.5em;
   text-align: center;
-  color: #333;
+  color: #ffffff;
 }
 
 .genre-title {
@@ -227,4 +228,7 @@ body {
 
 .right-arrow {
   margin-left: 10px;
+}
+.whitep{
+  color: #ddd;
 }

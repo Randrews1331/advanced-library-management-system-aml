@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
       <ul className="nav-links">
         <li>
-          <a href="#">
+          <a href="/">
             <i className="fas fa-home icon"></i>
             Home
           </a>
@@ -28,9 +28,9 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="Account">
             <i className="fas fa-life-ring icon"></i>
-            Support
+            My Account
           </a>
         </li>
         <li>

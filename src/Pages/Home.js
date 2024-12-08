@@ -71,7 +71,7 @@ const Home = () => {
           <img src={banner} alt="Greenwich Library Banner" />
           <div className="banner-text">
             <h1>Advance Media Library</h1>
-            <p>Explore our collection, programs, and events designed to inspire and educate.</p>
+            <p class="whitep">Explore our collection, programs, and events designed to inspire and educate.</p>
             <a href="#" className="cta-button">Explore More</a>
           </div>
         </div>
