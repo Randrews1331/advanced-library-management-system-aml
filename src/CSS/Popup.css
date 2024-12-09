@@ -15,13 +15,16 @@
 
 .popup-content {
   background-color: #ffffff;
-  padding: 30px;
+  padding: 40px; /* Increased padding for better spacing */
   border-radius: 12px;
   width: 90%;
-  max-width: 800px;
+  max-width: 900px; /* Increased max-width */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   position: relative;
   animation: fadeIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Added gap between sections */
 }
 
 .close-btn {
@@ -30,7 +33,7 @@
   right: 15px;
   background-color: transparent;
   border: none;
-  font-size: 24px;
+  font-size: 28px; /* Slightly larger close button */
   color: #555555;
   cursor: pointer;
   transition: color 0.2s;
@@ -44,6 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: space-between; /* Ensure spacing between elements */
 }
 
 .popup-left,
@@ -60,25 +64,26 @@
 
 .popup-image {
   width: 100%;
-  max-width: 250px;
+  max-width: 270px; /* Adjusted image size */
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .popup-title {
-  font-size: 24px;
+  font-size: 28px; /* Increased title font size */
   color: #333333;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .popup-price {
-  font-size: 20px;
+  font-size: 22px; /* Increased price font size */
   color: #777777;
+  margin-bottom: 20px; /* Added margin for separation */
 }
 
 .reservation-heading {
-  font-size: 22px;
+  font-size: 24px; /* Increased heading size */
   color: #333333;
   margin-bottom: 20px;
   text-align: center;
@@ -87,7 +92,7 @@
 .reservation-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px; /* Increased gap between form elements */
 }
 
 .form-group {
@@ -96,14 +101,14 @@
 }
 
 .form-group label {
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-size: 18px; /* Slightly larger label text */
+  margin-bottom: 8px; /* Increased margin for better spacing */
   color: #555555;
 }
 
 .form-group input[type="date"] {
-  padding: 10px;
-  font-size: 16px;
+  padding: 12px; /* Increased padding for better usability */
+  font-size: 18px; /* Increased font size */
   border: 1px solid #cccccc;
   border-radius: 6px;
   transition: border-color 0.2s;
@@ -115,8 +120,8 @@
 }
 
 .reserve-btn {
-  padding: 12px;
-  font-size: 16px;
+  padding: 14px; /* Increased button padding */
+  font-size: 18px; /* Larger button font */
   background-color: #007bff;
   color: #ffffff;
   border: none;

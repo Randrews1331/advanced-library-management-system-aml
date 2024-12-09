@@ -2,13 +2,14 @@ import React, { useRef, useState } from 'react';
 import miniLogo from '../CSS/imgs/mini.jpg';
 import '../CSS/login.css';
 import { handleMouseMove, handleMouseLeave } from '../Javascript/LoginJavaS';
+import { useAuth } from '../Components/AuthContext';
 
 const Login = () => {
+  const { login } = useAuth(); // Use the login function from context
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const imageRef = useRef(null);
 
-  // Function to handle login request
   const handleLogin = async () => {
     try {
       const response = await fetch('http://localhost:5000/login', {
@@ -16,14 +17,14 @@ const Login = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
       });
-      
+
       const data = await response.json();
-      
-      // Check if login was successful
+
       if (data.success) {
+        login(); // Set the global session state
         alert('Login successful');
       } else {
-        alert(data.message); // Displays error message from server (e.g., 'Invalid credentials')
+        alert(data.message);
       }
     } catch (error) {
       console.error('Error:', error);
@@ -32,7 +33,7 @@ const Login = () => {
   };
 
   return (
-    <div className="gradient">   
+    <div className="gradient">
       <div className="login-container">
         <div className="login-box">
           <img
@@ -60,9 +61,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button className="login-button" onClick={handleLogin}>Login</button>
-            <a class="signlink" href="signup">
-              SignUp
-            </a>
+            <a className="signlink" href="signup">SignUp</a>
           </div>
         </div>
       </div>
