@@ -5,6 +5,7 @@ import Home from '../Pages/Home';   // Ensure Home.js exists
 import Signup from '../Pages/Signup';
 import Account from '../Pages/Account.js';
 import Admin from '../Pages/Admin.js';
+import Support from '../Pages/Support.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/account" element={<Account />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
     </Router>
   );

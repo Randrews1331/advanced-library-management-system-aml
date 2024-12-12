@@ -1,3 +1,4 @@
+// Updated Navbar component with the "Support" page link
 import React from 'react';
 import '../CSS/Navbar.css'; // Import the CSS file for the navbar
 import logo from '../CSS/imgs/Logo.png'; // Correct path to logo image
@@ -41,6 +42,12 @@ const Navbar = () => {
             </a>
           </li>
         )}
+        <li>
+          <a href="/support">
+            <i className="fas fa-headset icon"></i>
+            Support
+          </a>
+        </li>
       </ul>
     </nav>
   );
