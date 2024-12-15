@@ -1,31 +1,55 @@
-import { pgTable, serial, varchar, integer, date, foreignKey, enumType } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  serial,
+  numeric,
+  timestamp,
+  varchar,
+  boolean,
+  pgEnum,
+  integer,
+} from "drizzle-orm/pg-core";
+import { relations } from "drizzle-orm";
+import { pg } from "./database";
+
 
 // Assuming you have a media table with an 'id' column
 export const reservations = pgTable("aml_reservations", {
   id: serial("id").primaryKey(),
-  mediaName: varchar("media_name", { length: 255 }).notNull(),  // Name of the media
-  mediaId: integer("media_id").notNull(),  // ID linking to the media table
-  startDate: date("start_date").notNull(),  // Start date of the reservation
-  endDate: date("end_date").notNull(),  // End date of the reservation
+  userID: integer("userID").notNull().references(() => user.id, { onDelete: "cascade" }),
+  itemID: integer('itemID').notNull().references(() => libaryItem.id, { onDelete: "cascade" }),
+  startDate: timestamp("startDate", { mode: "string" }).notNull().defaultNow(),
+  endDate: timestamp("endDate", { mode: "string" }).notNull().defaultNow(),
+
 });
 
-// Define a foreign key relationship to a media table
-export const media = pgTable("media", {
-  id: serial("id").primaryKey(),
-  name: varchar("name", { length: 255 }).notNull(),
-});
-reservations.mediaId.addConstraint(foreignKey({ columns: [reservations.mediaId], references: [media.id] }));
+//const userTypeEnum = pgEnum("itemType", ["LibaryMember","Libarian","BranchManager","AmlAdministrator","CallCenterOperator","Accountant","PurchaseManager","Admin","BranchLibrarian"])
 
-enum Role {
-  USER = "user",
-  ADMIN = "admin",
-}
-
-export const usersAndAdmins = pgTable("users_and_admins", {
+export const user = pgTable("aml_user",{
   id: serial("id").primaryKey(),
-  firstName: varchar("first_name", { length: 255 }).notNull(),
-  lastName: varchar("last_name", { length: 255 }).notNull(),
+  //userType: userTypeEnum("userType").default("LibaryMember").notNull(),
+  userType: varchar("userType").default("LibaryMember").notNull(),
+  firstName: varchar("firstName", { length: 255 }).notNull(),
+  lastName: varchar("lastName", { length: 255 }).notNull(),
+  dob: timestamp("dob", { mode: "string" }).notNull().defaultNow(),
   email: varchar("email", { length: 255 }).notNull().unique(),
-  password: varchar("password", { length: 255 }).notNull(),
-  role: enumType("role", Role).notNull(), // Define user role (user/admin)
+  userName: varchar("firstName", { length: 255 }).notNull(),
+  password: varchar("firstName", { length: 255 }).notNull(),
 });
+
+//const itemTypeEnum = pgEnum("itemType", ["game","book","dvd","cd"])
+
+export const libaryItem = pgTable("aml_libaryItems",{
+  id: serial("id").primaryKey(),
+  itemName: varchar("itemName", {length: 255}).notNull(),
+  itemPrice: integer("itemPrice").notNull(),
+  //type: itemTypeEnum("type").notNull(),
+  type: varchar("type").notNull(),
+  gameAgeRating: integer("game_age_rating"),
+  dvdAgeRating: integer("dvd_age_rating"),
+  cdExplicitContent: boolean("cd_explicit_content"),
+  bookAuthor: varchar("book_author", { length: 100 }),
+  itemAvailability: boolean("itemAvailability").default(true).notNull(),
+});
+
+
+
